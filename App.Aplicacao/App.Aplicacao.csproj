@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{440E1142-F1FC-4AEB-B666-C915091F422A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>App.Aplicacao</RootNamespace>
+    <AssemblyName>App.Aplicacao</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper, Version=4.2.0.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.4.2.0\lib\net45\AutoMapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CadastroContaUsuarioAplicacao.cs" />
+    <Compile Include="MapperDTO\InicializadorMapper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\App.Aplicacao.Comuns\App.Aplicacao.Comuns.csproj">
+      <Project>{ca4b4959-f05f-4f18-9da5-951cf5301507}</Project>
+      <Name>App.Aplicacao.Comuns</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\App.Aplicacao.DTO\App.Aplicacao.DTO.csproj">
+      <Project>{cf1908b8-cfac-48e6-8bcf-08db7a2d25c4}</Project>
+      <Name>App.Aplicacao.DTO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\App.Aplicacao.Interfaces\App.Aplicacao.Interfaces.csproj">
+      <Project>{c2f2bafd-dc48-4760-a430-f2ab525b1638}</Project>
+      <Name>App.Aplicacao.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\App.Dominio.GerenciamentoUsuario\App.Dominio.GerenciamentoUsuario.csproj">
+      <Project>{23463752-110b-4095-98ea-69fdef497ad2}</Project>
+      <Name>App.Dominio.GerenciamentoUsuario</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\App.Dominio\App.Dominio.csproj">
+      <Project>{d8929c94-ba75-44b1-a79f-c37fcff2a453}</Project>
+      <Name>App.Dominio</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
