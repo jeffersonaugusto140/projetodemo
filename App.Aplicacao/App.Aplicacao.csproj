@@ -61,13 +61,13 @@
       <Project>{c2f2bafd-dc48-4760-a430-f2ab525b1638}</Project>
       <Name>App.Aplicacao.Interfaces</Name>
     </ProjectReference>
-    <ProjectReference Include="..\App.Dominio.GerenciamentoUsuario\App.Dominio.GerenciamentoUsuario.csproj">
-      <Project>{23463752-110b-4095-98ea-69fdef497ad2}</Project>
-      <Name>App.Dominio.GerenciamentoUsuario</Name>
-    </ProjectReference>
     <ProjectReference Include="..\App.Dominio\App.Dominio.csproj">
       <Project>{d8929c94-ba75-44b1-a79f-c37fcff2a453}</Project>
       <Name>App.Dominio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ProjetoDemoGit\App.Comuns\App.Comuns.csproj">
+      <Project>{00C75DDB-F4F2-4997-83AC-9F97D81A929D}</Project>
+      <Name>App.Comuns</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using App.Dominio.Generico;
-using App.Dominio.GerenciamentoUsuario.ObjetoDeValor;
+using App.Dominio.ObjetoDeValor;
 using App.Dominio.Repositorio;
 
 namespace App.Infra.Repositorio.Generico

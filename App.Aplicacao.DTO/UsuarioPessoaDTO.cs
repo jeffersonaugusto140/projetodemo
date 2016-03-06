@@ -1,6 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using App.Aplicacao.DTO.Generico;
+using App.Dominio.Entidades.Comum.Impl;
 
 namespace App.Aplicacao.DTO
 {
@@ -10,8 +10,7 @@ namespace App.Aplicacao.DTO
         public long UsuarioId { get; set; }
         public string Login { get; set; }
         public string Senha { get; set; }
-
-        // Usuário
+        // Pessoa
         public long PessoaId { get; set; }
         public string Nome { get; set; }
         public string SobreNome { get; set; }
@@ -19,13 +18,29 @@ namespace App.Aplicacao.DTO
         public string EmailOpcao1 { get; set; }
         public string EmailOpcao2 { get; set; }
 
-        public List<ClubeEsportivoDTO> ClubesDeInteresse { get; set; }
-        public List<OrganizacaoEsportivaDTO> OrganizacoesEsportivas { get; set; }
-
-        public UsuarioPessoaDTO()
+        internal override object ConverterParaEntidade()
         {
-            this.ClubesDeInteresse = new List<ClubeEsportivoDTO>();
-            this.OrganizacoesEsportivas = new List<OrganizacaoEsportivaDTO>();
+            var user = new Usuario
+            {
+                Ativo = true,
+                DadosPessoais = new Pessoa
+                {
+                    Ativo = true,
+                    DataAlteracao = DateTime.Now,
+                    DataCriacao = DateTime.Now,
+                    DataNascimento = DataNascimento,
+                    EmailOpcao1 = EmailOpcao1,
+                    EmailOpcao2 = EmailOpcao2,
+                    Nome = Nome,
+                    SobreNome = SobreNome
+                },
+                DataAlteracao = DateTime.Now,
+                DataCriacao = DateTime.Now,
+                Login = Login,
+                Senha = Senha
+            };
+
+            return user;
         }
     }
 }

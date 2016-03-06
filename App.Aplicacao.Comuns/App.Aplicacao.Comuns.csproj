@@ -44,10 +44,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\App.Dominio.GerenciamentoUsuario\App.Dominio.GerenciamentoUsuario.csproj">
-      <Project>{23463752-110b-4095-98ea-69fdef497ad2}</Project>
-      <Name>App.Dominio.GerenciamentoUsuario</Name>
-    </ProjectReference>
     <ProjectReference Include="..\App.Dominio\App.Dominio.csproj">
       <Project>{d8929c94-ba75-44b1-a79f-c37fcff2a453}</Project>
       <Name>App.Dominio</Name>

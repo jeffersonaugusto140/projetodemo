@@ -44,16 +44,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ClubeEsportivoDTO.cs" />
     <Compile Include="Generico\DTOGenerico.cs" />
-    <Compile Include="OrganizacaoEsportivaDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UsuarioPessoaDTO.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\App.Aplicacao.Comuns\App.Aplicacao.Comuns.csproj">
+      <Project>{ca4b4959-f05f-4f18-9da5-951cf5301507}</Project>
+      <Name>App.Aplicacao.Comuns</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\App.Dominio\App.Dominio.csproj">
+      <Project>{d8929c94-ba75-44b1-a79f-c37fcff2a453}</Project>
+      <Name>App.Dominio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ProjetoDemoGit\App.Comuns\App.Comuns.csproj">
+      <Project>{00C75DDB-F4F2-4997-83AC-9F97D81A929D}</Project>
+      <Name>App.Comuns</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

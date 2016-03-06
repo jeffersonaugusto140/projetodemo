@@ -1,6 +1,6 @@
 ﻿using System.Linq;
-using App.Dominio.GerenciamentoUsuario.Entidades;
-using App.Dominio.GerenciamentoUsuario.Servicos.Repositorio;
+using App.Dominio.Entidades.Comum.Impl;
+using App.Dominio.Repositorio.Comum;
 using App.Infra.Repositorio.Generico;
 
 namespace App.Infra.Repositorio

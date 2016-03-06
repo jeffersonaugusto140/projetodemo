@@ -9,7 +9,5 @@ namespace App.Aplicacao.Interfaces
         void CadastrarUsuario(UsuarioPessoaDTO usuarioPessoaDto);
         void AlterarUsuario(UsuarioPessoaDTO usuarioPessoaDto);
         void AlterarSenhaUsuario(UsuarioPessoaDTO usuarioPessoaDto);
-
-        IEnumerable<ClubeEsportivoDTO> ListarClubesEsportivos();
     }
 }

@@ -43,7 +43,6 @@
     <Compile Include="Generico\IAplicacao.cs" />
     <Compile Include="Generico\IGerenciamento.cs" />
     <Compile Include="ICadastroContaUsuarioAplicacao.cs" />
-    <Compile Include="IGerenciamentoOrganizacaoEsportiva.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -40,31 +40,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Entidades\ClubeEsportivo.cs" />
-    <Compile Include="Excecoes\ExcecaoEntidadeBase.cs" />
-    <Compile Include="Excecoes\OrganizacaoEsportivaExcecao.cs" />
-    <Compile Include="Excecoes\PessoaExcecao.cs" />
-    <Compile Include="Excecoes\UsuarioExcecao.cs" />
-    <Compile Include="Entidades\OrganizacaoEsportiva.cs" />
-    <Compile Include="Entidades\Pessoa.cs" />
-    <Compile Include="Regras\OrganizacaoEsportivaRegra.cs" />
-    <Compile Include="Regras\PessoaRegras.cs" />
-    <Compile Include="Regras\UsuarioRegras.cs" />
-    <Compile Include="Entidades\Usuario.cs" />
-    <Compile Include="ObjetoDeValor\Email.cs" />
-    <Compile Include="ObjetoDeValor\VerificadorExistencia.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Servicos\Implementacao\PessoaServico.cs" />
-    <Compile Include="Servicos\Implementacao\UsuarioServico.cs" />
-    <Compile Include="Servicos\Interfaces\Base\IServicoBase.cs" />
-    <Compile Include="Servicos\Interfaces\IPessoaServico.cs" />
-    <Compile Include="Servicos\Interfaces\IUsuarioServico.cs" />
-    <Compile Include="Servicos\Repositorio\IClubeEsportivoRepositorio.cs" />
-    <Compile Include="Servicos\Repositorio\IPessoaRepositorio.cs" />
-    <Compile Include="Servicos\Repositorio\IUsuarioRepositorio.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Servicos\Implementacao\Excecoes\" />
+    <Folder Include="Entidades\" />
+    <Folder Include="ObjetoDeValor\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\App.Dominio\App.Dominio.csproj">

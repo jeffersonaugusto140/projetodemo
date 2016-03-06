@@ -9,6 +9,6 @@ namespace App.Aplicacao.Interfaces.Generico
         void Adicionar(T dto);
         void Alterar(T dto);
         void Inativar(T dto);
-        IEnumerable<T> ListarOrganizacaoEsportiva(UsuarioPessoaDTO usuarioPessoaDto);
+        IEnumerable<T> Listar(int pagina);
     }
 }

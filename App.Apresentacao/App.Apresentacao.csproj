@@ -309,6 +309,10 @@
       <Project>{92c50049-1c8c-4759-bd13-21a5625d49b7}</Project>
       <Name>App.Infra.Excecoes</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ProjetoDemoGit\App.Comuns\App.Comuns.csproj">
+      <Project>{00c75ddb-f4f2-4997-83ac-9f97d81a929d}</Project>
+      <Name>App.Comuns</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

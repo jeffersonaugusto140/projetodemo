@@ -1,8 +1,9 @@
 ﻿using System.Collections.Generic;
 using App.Aplicacao.DTO;
 using App.Aplicacao.Interfaces;
-using App.Dominio.GerenciamentoUsuario.Entidades;
-using App.Dominio.GerenciamentoUsuario.Servicos.Interfaces;
+using App.Comuns.Ferramentas;
+using App.Dominio.Entidades.Comum.Impl;
+using App.Dominio.Servicos.Interfaces;
 using AutoMapper;
 
 namespace App.Aplicacao
@@ -10,26 +11,13 @@ namespace App.Aplicacao
     public class CadastroContaUsuarioAplicacao : ICadastroContaUsuarioAplicacao
     {
         private readonly IUsuarioServico _usuarioServico;
-        private readonly IPessoaServico _pessoaServico;
 
         public void CadastrarUsuario(UsuarioPessoaDTO usuarioPessoaDto)
         {
-            var usuario = Mapper.Map<Usuario>(usuarioPessoaDto);
-            var pessoa = Mapper.Map<Pessoa>(usuarioPessoaDto);
-
-            usuario.DadosPessoais = pessoa;
-
-            var sss = Mapper.Map<UsuarioPessoaDTO>(usuario);
-
+            var usuario = usuarioPessoaDto.ConverterParaEntidade().Cast<Usuario>();
             _usuarioServico.Adicionar(usuario);
-            _pessoaServico.Adicionar(pessoa);
         }
-
-        public IEnumerable<ClubeEsportivoDTO> ListarClubesEsportivos()
-        {
-            return null;
-        }
-
+        
         public void AlterarUsuario(UsuarioPessoaDTO usuarioPessoaDto)
         {
             throw new System.NotImplementedException();
@@ -40,10 +28,9 @@ namespace App.Aplicacao
             throw new System.NotImplementedException();
         }
 
-        public CadastroContaUsuarioAplicacao(IUsuarioServico usuarioServico, IPessoaServico pessoaServico)
+        public CadastroContaUsuarioAplicacao(IUsuarioServico usuarioServico)
         {
             _usuarioServico = usuarioServico;
-            _pessoaServico = pessoaServico;
         }
     }
 }

@@ -97,17 +97,21 @@
       <Project>{440e1142-f1fc-4aeb-b666-c915091f422a}</Project>
       <Name>App.Aplicacao</Name>
     </ProjectReference>
-    <ProjectReference Include="..\App.Dominio.GerenciamentoUsuario\App.Dominio.GerenciamentoUsuario.csproj">
-      <Project>{23463752-110b-4095-98ea-69fdef497ad2}</Project>
-      <Name>App.Dominio.GerenciamentoUsuario</Name>
-    </ProjectReference>
     <ProjectReference Include="..\App.Dominio\App.Dominio.csproj">
       <Project>{d8929c94-ba75-44b1-a79f-c37fcff2a453}</Project>
       <Name>App.Dominio</Name>
     </ProjectReference>
+    <ProjectReference Include="..\App.Infra.Excecoes\App.Infra.Excecoes.csproj">
+      <Project>{92c50049-1c8c-4759-bd13-21a5625d49b7}</Project>
+      <Name>App.Infra.Excecoes</Name>
+    </ProjectReference>
     <ProjectReference Include="..\App.Infra.Repositorio\App.Infra.Repositorio.csproj">
       <Project>{24e8aace-bcce-4763-aedd-3733b82accc9}</Project>
       <Name>App.Infra.Repositorio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ProjetoDemoGit\App.Comuns\App.Comuns.csproj">
+      <Project>{00c75ddb-f4f2-4997-83ac-9f97d81a929d}</Project>
+      <Name>App.Comuns</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
